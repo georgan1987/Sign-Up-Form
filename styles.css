@@ -1,4 +1,166 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden;  */
+  }
+  
+  
+html body{
+    font-size: 1.2rem;
+    padding: 0px;
+    margin: 0px;
+    /* font-family: customFont; */
+  }
+
 .content {
     display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.left {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    width: 60vw;
+    min-width: 345px;
+    background: url('background-pic.jpg');
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; 
+    color: white;   
+}
+
+.side-hero {
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    line-height: 2rem;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-hero img {
+    width: 5rem;
+    height: auto;
+    margin: 20px;
+}
+
+.side-hero h1 {
+    font-size: 3.5rem;
+    color: white
+}
+
+.side-hero p {
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 100%;
+    line-height: 1.5rem;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+/* Form section */
+
+.right{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 2;
+    background-color: rgba(231, 234, 236, 0.288)
+}
+
+.text {
+    padding: 1rem 6rem 2.5rem 2rem;
+    font-size: 1.6rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.2rem 2vw 3rem 2vw;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    width: 60vw;
+    flex-flow: row wrap;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.form-title {
+    font-size: 1.6rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 15rem;
+}
+
+input {
+    /* font-family: ; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    border: none;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+
+input:focus:valid {
+    border: 2px solid rgba(0, 255, 64, 0.87);
+}
+
+input:focus:invalid {
+    border: 2px solid rgba(255, 0, 0, 0.945);
+}
+
+
+/* Submit Section */
+button[type='submit']{
+padding: 0.8rem 1.3rem;
+font-size: 1.3rem;
+/* background-color: ; */
+border: none;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+background-color: rgb(9, 191, 247);
+color: white;
+}
+
+button[type='submit']:hover{
+background-color: rgb(8, 101, 129);
+
+}
+
+.below-form {
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: rgb(173, 155, 173);
 }
