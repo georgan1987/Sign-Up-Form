@@ -37,10 +37,47 @@ email.addEventListener('input', () => {
 });
 
 phoneNumber.addEventListener('input', ()=> {
-    if (phoneNumber.validity.typeMismatch){
-        phoneNumberError.textContent = 'Please enter a 10-digit phone number'
+    if (phoneNumber.validity.patternMismatch){
+        phoneNumberError.textContent = 'Please enter a 10-digit phone number';
     } else {
         phoneNumberError.textContent = ''
+    }
+});
+
+password.addEventListener('input', ()=> {
+    if (password.validity.patternMismatch){
+        const currentValue = password.value;
+        const regExpCap = /[A-Z]/g;
+        const regExpDig = /[0-9]/g;
+        let result = '';
+
+
+        if (regExpCap.test(currentValue)){
+            result += '';
+        } else {
+            result += "Missing at least a capital letter";
+            result += '\n';
+        }
+
+
+        if (regExpDig.test(currentValue)){
+            result += '';
+        } else {
+            result += 'Missing at least a number';
+            result += '\n';
+        }
+
+
+        if (currentValue.length < 8){
+            result += 'Password must be at least 8 characters long';
+            result += '\n';
+        } else {
+            result += '';
+        }
+        
+        passwordError.textContent = result;
+    } else {
+    passwordError.textContent = '';
     }
 });
 
