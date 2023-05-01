@@ -49,6 +49,7 @@ password.addEventListener('input', ()=> {
         const currentValue = password.value;
         const regExpCap = /[A-Z]/g;
         const regExpDig = /[0-9]/g;
+        const regExpSpecial = /[#?!@$%^&*-]/g;
         let result = '';
 
 
@@ -67,6 +68,12 @@ password.addEventListener('input', ()=> {
             result += '\n';
         }
 
+        if (regExpSpecial.test(currentValue)){
+            result += '';
+        } else {
+            result += 'Missing at least a special character';
+            result += '\n';
+        }
 
         if (currentValue.length < 8){
             result += 'Password must be at least 8 characters long';
@@ -78,6 +85,14 @@ password.addEventListener('input', ()=> {
         passwordError.textContent = result;
     } else {
     passwordError.textContent = '';
+    }
+});
+
+passwordConfirm.addEventListener('input', ()=> {
+    if (password.value !== passwordConfirm.value) {
+        passwordConfirmError.textContent = 'Passwords do not match';
+    } else {
+        passwordConfirmError.textContent = '';
     }
 });
 

@@ -61,9 +61,9 @@ html body{
     align-self: center;
  }
 
-.side-hero p {
+.side-hero > p {
     background-color: rgba(0, 0, 0, 0.527);
-    width: 35vw;
+    width: 100%;
     line-height: 1.5rem;
     position: absolute;
     bottom: 0px;
