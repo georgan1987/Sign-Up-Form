@@ -3,15 +3,11 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    /* overflow-x: hidden;  */
   }
   
   
 html body{
     font-size: 1.2rem;
-    padding: 0px;
-    margin: 0px;
-    /* font-family: customFont; */
   }
 
 
@@ -22,13 +18,11 @@ html body{
 }
 
 /* Side Hero part of the webpage */
-
 .left {
     display: flex;
     flex-grow: 1;
     position: relative;
     width: 60vw;
-    min-width: 345px;
     background: url('background-pic.jpg');
     background-size: cover;
     height: 100vh;
@@ -70,7 +64,7 @@ html body{
     color: white;
     margin: 0px;
     text-align: center;
-    padding: 0.4rem;
+    padding: 0.4rem 0rem;
 }
 
 /* Form section */
@@ -147,7 +141,6 @@ input:focus:invalid {
 button[type='submit']{
 padding: 0.8rem 1.3rem;
 font-size: 1.3rem;
-/* background-color: ; */
 border: none;
 border-radius: 5px;
 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
@@ -178,4 +171,11 @@ background-color: rgb(8, 101, 129);
 a {
     text-decoration: none;
     color: rgb(173, 155, 173);
+}
+
+/* Media Queries */
+@media screen {
+.left{
+    min-width: 540px;
+}
 }

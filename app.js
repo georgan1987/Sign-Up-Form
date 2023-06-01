@@ -1,3 +1,4 @@
+//Declaration of constant variables
 const firstName = document.querySelector('#first-name');
 const lastName = document.querySelector('#last-name');
 const email = document.querySelector('#email');
@@ -12,6 +13,7 @@ const phoneNumberError = document.querySelector('#phone-error');
 const passwordError = document.querySelector('#pwd-error');
 const passwordConfirmError = document.querySelector('#cpwd-error');
 
+//Form Validation Rules
 firstName.addEventListener('input', () => {
     if (firstName.value === ''){
         firstNameError.textContent = 'Please enter your first name!'
@@ -57,34 +59,34 @@ password.addEventListener('input', ()=> {
             result += '';
         } else {
             result += "Missing at least a capital letter";
-            result += '\n';
+            result += '<br>';
         }
 
 
         if (regExpDig.test(currentValue)){
             result += '';
         } else {
-            result += 'Missing at least a number';
-            result += '\n';
+            result += "Missing at least a number";
+            result += '<br>';
         }
 
         if (regExpSpecial.test(currentValue)){
             result += '';
         } else {
-            result += 'Missing at least a special character';
-            result += '\n';
+            result += "Missing at least a special character";
+            result += '<br>';
         }
 
         if (currentValue.length < 8){
             result += 'Password must be at least 8 characters long';
-            result += '\n';
+            result += '<br>';
         } else {
             result += '';
         }
         
-        passwordError.textContent = result;
+        passwordError.innerHTML = result;
     } else {
-    passwordError.textContent = '';
+    passwordError.innerHTML = '';
     }
 });
 
@@ -95,6 +97,12 @@ passwordConfirm.addEventListener('input', ()=> {
         passwordConfirmError.textContent = '';
     }
 });
+
+//Prevent button's default action
+document.querySelector('.create-button').addEventListener("click", function(event) {
+    event.preventDefault()
+}
+);
 
 
 
